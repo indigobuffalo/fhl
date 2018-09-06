@@ -37,17 +37,22 @@
      background: #a7ddb9;
  }
 
- table, td, th {
-     border: 1px solid black;
-     border-collapse: collapse;
-     text-align: left;
- }
-
- table {
-     width: 100%;
- }
-
  .tiers {
      grid-area: tiers;
      background: #f7ff12;
+ }
+
+ table, td, th {
+     border: 1px solid black;
+     border-collapse: collapse;
+ }
+
+ table#players {
+     width: 80%;
+     text-align: left;
+ }
+
+ table#tiers {
+    width: 80%;
+     text-align: center;
  }
