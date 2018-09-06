@@ -1,26 +1,53 @@
-// see https://stackoverflow.com/questions/47873687/create-a-table-with-css-grid
+ /* see https://stackoverflow.com/questions/47873687/create-a-table-with-css-grid*/
 
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(50px, 1fr));
-  background-color: #fff;
-  color: #444;
-  max-width: 800px;
-}
+ .container {
+     display: grid;
 
-.row {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(50px, 1fr));
-}
+     /*grid-template-columns: 40% 30% 30%;*/
+     /*grid-template-columns: 7fr 3fr;*/
+     grid-template-columns: repeat(1, 7fr 3fr);
 
-div:nth-child(4) { grid-row-start: 2; }
-div:nth-child(5) { grid-row-start: 3; }
+     grid-template-rows: 3fr 7fr;
 
-.box {
-  background-color: #444;
-  color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 150%;
-}
+     grid-template-areas:
+         "intro intro"
+         "players tiers";
+
+     /*grid-column-gap: 1em;*/
+     /*grid-row-gap: 1em;*/
+     grid-gap: 1em;
+ }
+
+ /*.container > div {*/
+     /*background: #eee;*/
+     /*padding: 1em;*/
+ /*}*/
+
+ /*.container > div:nth-child(odd) {*/
+     /*background: #ddd;*/
+ /*}*/
+
+ .intro {
+     grid-area: intro;
+     background: #31adaf;
+ }
+
+ .players {
+     grid-area: players;
+     background: #a7ddb9;
+ }
+
+ table, td, th {
+     border: 1px solid black;
+     border-collapse: collapse;
+     text-align: left;
+ }
+
+ table {
+     width: 100%;
+ }
+
+ .tiers {
+     grid-area: tiers;
+     background: #f7ff12;
+ }
